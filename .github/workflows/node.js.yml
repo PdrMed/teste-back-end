@@ -16,8 +16,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    - run: c:/stop.bat
-      continue-on-error: true
     - run: npm install
+    - run: npx pm2 stop api
+      continue-on-error: true
     - run: npm run build
-    - run: c:/start.bat
+    - run: npx pm2 start dist/server.js --name api
