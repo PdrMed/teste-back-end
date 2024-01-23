@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --transpile-only --trace-deprecation --respawn --ignore-watch node_modules src/server.ts",
-    "build": "npm run build",
+    "build": "tsc --build",
     "stop": "node dist/stop.js",
     "start": "node dist/start.js"
   },
